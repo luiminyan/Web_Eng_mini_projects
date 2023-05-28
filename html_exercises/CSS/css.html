@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name = "keywords" content="CSS">
+        <title>CSS style</title>
+        <style>
+            .Pseudoselektoren a:link{
+                color: aquamarine;
+            }
+            .Pseudoselektoren a:visited{
+                color: cadetblue;
+            }
+            .Pseudoselektoren::first-line{
+                color: chocolate;
+            }
+            .nthChildExample p:nth-child(3), h4{
+                color: aquamarine;
+            }
+
+        </style>
+       
+
+    </head>
+    <body>
+        <header>
+            <h1>The CSS designing</h1>
+            </header>
+        <main>
+            <h2>3 ways to set the CSS pattern in a website</h2>
+            <ul>
+                <li>
+                    <a href="inlineCSS.html">Inline CSS</a>
+                </li>
+                <li> 
+                    <a href="internalCSS.html">Internal CSS</a>
+                </li>
+                <li>
+                    <a href="externalCSS.html">External CSS</a>
+                </li>
+            </ul>
+
+            <h2>Selektoren</h2>
+            <ul>
+                <li>Einfach Selektoren</li>
+                <li><a href="./Selektoren/nachfolgerSelektor.html">Nachfolger Selektor</a></li>
+                <li><a href="./Selektoren/kindSelektor.html">Kind Selektor</a></li>
+                <li><a href="./Selektoren/geschwisterSelektor.html">Geschwister Selektor</a></li>
+                <li><a href="./Selektoren/angrenzederGeschwisterSelektor.html">Angrenzeder Geschwister Selektor</a></li>
+            </ul>
+
+            <h3>Pseudoselektoren</h3>
+            <ul>
+                <li><a href="./Selektoren/Pseudoselektoren/pseudoSelecLink.html">Pseudoselektor 1: link</a></li>
+                <li>
+                    <p class="Pseudoselektoren">
+                        First line: text to test Pseudoselektoren
+                        <p>test</p>
+                        <!-- <br> -->
+                        Third line: empty
+                    </p>
+                </li>
+            </ul>
+            
+            <h3>nth-child selektor</h3>
+            <div class="nthChildExample">
+                <a href="https://www.runoob.com/cssref/sel-nth-child.html">菜鸟教程的解释</a>
+                <p>Paragraph 1</p>
+                <p>Paragraph 2</p>
+                <p>Paragraph 3</p>
+                <p>Paragraph 4</p>
+                <h4>I love you!</h4>    
+            </div>
+
+            <h2>CSS layouts</h2>
+
+            <h3>Flexbox Layout</h3>
+            <ul>
+                <li><a href="./Layouts/flexboxLayout.html">Flexbox layout</a></li>
+                <li><a href="./Layouts/gridLayout.html">Grid layout</a></li>
+            </ul>
+        </main>
+    </body>
+    <footer>
+        <p>The end!</p>
+    </footer>
+</html>

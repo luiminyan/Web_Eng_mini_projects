@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>求学生成绩</title>
+    </head>
+    <body>
+        <script>
+            let stuNumTotal = Number(prompt('请输入学生的总人数'));
+            let sum = 0;
+            let average = 0;
+            for (let i = 1; i <= stuNumTotal; i++) {
+                let note =  Number(prompt('请输入学生 ' + i + ' 的成绩：'));
+                sum += note;
+            }
+            average = sum / stuNumTotal;
+
+            alert('学生的总成绩是：' + sum);
+            alert('平均分是：' + average);
+        </script>
+
+    </body>
+</html>
