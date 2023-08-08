@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS-Beispiel</title>
+        <style type="text/css">
+            * {
+                font-size: 18px;
+                font-family: sans-serif;
+                color: white;
+                /* 文字位置 */
+                text-align: center;
+            }
+
+            body {
+                background-color: #aaa;
+            }
+
+            /* direct child in body */
+            body > * {
+                /* 外边距 */
+                margin: 10px;
+            }
+            body > * > * {
+                border: 4px dotted;
+            }
+
+            #title {
+                color: blue;
+                /* 内边距 */
+                padding: 40px;
+            }
+
+            main > div {
+                /* 设置页面里elem的排列 */
+                display:inline-block;
+            }
+
+            /* for the divs in main */
+            main > div:nth-child(1) {
+                width: 32px;
+                height: 32px;
+                background-color: #caa;
+            }
+            main > div:nth-child(2) {
+                width: 64px;
+                height: 64px;
+                background-color: #aca;
+            }
+            main > div:nth-child(3) {
+                width: 128px;
+                height: 128px;
+                background-color: #aac;
+            }
+
+            /* 设置悬浮光标 */
+            #title:hover, main > div:hover {
+                background-color: black;
+            }
+
+
+            /* the footer information */
+            .deco {
+                background-color: white;
+                color: black;
+                padding: 40px;
+                height: auto;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <p id="title">TITEL</p>
+            <p id="beschreibung">BESCHREIBUNG</p>
+        </header>
+        <main>
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+        </main>
+        <footer class="deco">
+            Untere Zeile
+        </footer>
+    </body>
+</html>

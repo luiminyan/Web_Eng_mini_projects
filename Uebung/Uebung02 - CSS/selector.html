@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>selctor page</title>
+        <link rel="stylesheet" type="text/css" href="./selector.css">
+    </head>
+    <body>
+        
+        <div id="div1">
+            <h3>Nachverfahrenselektor: </h3>
+            <p>Divider 1, paragraph 1</p>
+            <p>Divider 1, paragraph 2</p>
+            <p>Divider 1, paragraph 3</p>
+        </div>
+
+        <div id="div2">
+            <h3>Nachbarnselektor element: +</h3>
+            <p>1nd P in div2</p>
+            <p id="specialP">The special paragraph.</p>
+            <p>3rd P in div2</p>
+            <p>4th P in div2</p>
+        </div>
+
+        <div id="div3">
+            <h3>Geschwister element: ~</h3>
+            <p>divider 3 paragraph 1</p>
+            <p id="siblingTester">divider 3 paragraph 2</p>
+            <p>divider 3 paragraph 3</p>
+            <p>4th P in div3</p>
+            <div>
+                <h3>Kindselektor: >, only direct-child</h3>
+                <p>Divider in divider 3.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+div {
+    border: 10px solid seagreen;
+    /* padding:内边距 */
+    padding: 40px;
+    /* margin: 外边距 */
+    margin: 4px;
+}
+
+#specialP {
+    font-size: large;
+    color: teal;
+    font-weight: bold;
+}
+/* select id = div1 */
+#div1 {
+    height: auto;
+    width: 300px;
+    background-color: lightgoldenrodyellow;
+}
+
+/* Nachfahren-selektor: select p in #div1 */
+#div1 p {
+    font-style: italic;
+}
+
+/* Kind-selektor: select only direct child element */
+#div3 > p {
+    color: purple;
+    font-size: small;
+}
+
+
+/* Nachbarnselektor: + , select the direct afterwards neighbouring element*/
+#specialP + p {
+    background-color:lightcyan;
+}
+
+/* Geschwisternselektor: ~ */
+#siblingTester ~ p {
+    font-size: x-large;
+    font-weight:bolder;
+}
+

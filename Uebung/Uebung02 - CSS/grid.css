@@ -1,0 +1,53 @@
+.head {
+    grid-area: header;
+}
+.content {
+    grid-area: content;
+}
+.nav {
+    grid-area: nav;
+    display: flex;
+    /* flex上下间距 */
+    align-items: center;
+    /* flex内间距 */
+    justify-content: space-evenly;
+}
+.side {
+    grid-area: sidebar;
+}
+.foot {
+    grid-area: footer;
+}
+.wrapper {
+    /* hier die allgemeine grid-Konfiguration einfügen */
+     display: grid;
+     grid-gap: 20px;
+     grid-template-areas: 
+         "header" 
+         "nav"
+         "content" 
+         "sidebar"
+         "footer";  
+}
+
+div {
+    background-color: gainsboro;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+}
+
+@media (min-width: 500px) {
+    /* hier die Anpassungen für Geräte mit geringer Auflösung einfügen */ 
+    .wrapper {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "header header"  
+            "nav nav" 
+            "sidebar content"
+            "footer footer"; 
+    }
+}
