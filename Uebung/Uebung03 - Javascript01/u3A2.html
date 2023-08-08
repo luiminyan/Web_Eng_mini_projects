@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zahlenratespiel</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="bisherEingegeben">Bisherige Eingabe: </p>
+        <p id="nachricht"></p>
+        <!-- input field  -->
+        <!-- set a label / id for a html element -->
+        <label for="eingabe">Ihre Eingabe: </label>
+        <!-- input tag -->
+        <input type="text" id="eingabe">
+
+        <!-- submit button -->
+        <input type="submit" value="Prüfen" id="absenden">
+
+        <script>
+            // generate random number between 1 and 100
+            var randomNumber = Math.floor(Math.random() * 100) + 1;
+            // current try round
+            var versuch = 1;
+
+            // connect the DOM elements with variables (like in android studio)
+            var bisherEingegeben = document.querySelector("#bisherEingegeben");
+            var nachricht = document.querySelector("#nachricht");
+            var eingabe = document.querySelector("#eingabe");
+            var absenden = document.querySelector("#absenden");
+
+            // add eventListener
+            absenden.addEventListener('click', checkValue);
+
+            function checkValue() {
+                let spielen = function(eingabe){
+                    // reset message context
+                    nachricht.textContent = "";
+
+                    // read number from input
+                    var eingabeNummer = Number(eingabe.value);
+
+                    // check input
+                    if (versuch > 10) {
+                        nachricht.textContent += "Sie haben mehr als 10 mal versucht und das Spiel schon verloren!";
+                    }
+                    else if (eingabeNummer == randomNumber) {
+                        nachricht.textContent += "Ihre Eingabe ist korrekt!";
+                    }
+                    else if (eingabeNummer < randomNumber) {
+                        nachricht.textContent += "Zu niedrig! ";
+                    }
+                    else {
+                        nachricht.textContent += "Zu hoch!";
+                    }
+
+                    versuch++;
+                    // clean up input
+                    eingabe.value = '';
+                    eingabe.focus();
+                };
+
+                let input = eingabe.value;
+
+                // if inputNumber is not a number
+                try {
+                    if (isNaN(input)) {
+                        throw {
+                            name: 'NumberFormatException',
+                            message : 'Please give a number!'
+                        };
+                    }
+
+                    else if (Number(input) < 1 || Number(input) > 100) {
+                        throw {
+                            name : 'OutOfRangeException',
+                            message : 'Please give a number between 1 and 100!'
+                        };
+                    }
+
+                    spielen(eingabe);
+                } 
+                catch(e) {
+                    alert(e.name + ": " + e.message);
+                }
+            }
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+    

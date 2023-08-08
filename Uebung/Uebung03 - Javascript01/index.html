@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Zahlenratespiel</title>
+  <style>
+    .highlight {
+      color: red;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Inbox</p>
+    <ul>
+    </ul>
+  </div>
+  <!-- in file javascript -->
+  <script>
+    var messages = [
+        {
+          "subject": "first message",
+          "flag": ""
+        },{
+          "subject": "second message",
+          "flag": ""
+        },{
+          "subject": "third message",
+          "flag": "seen"
+        },{
+          "subject": "spam message",
+          "flag": ""
+        },{
+          "subject": "another message",
+          "flag": "seen"
+        }
+    ];
+    // select unordered list element in the div tag
+    /* It is used to select and retrieve the first element, 
+     * that matches a specified CSS selector within the context of a given HTML document. */
+
+    var list = document.querySelector("div ul");
+    messages.forEach(function(message) {
+      // create li in the selected elem (div ul)
+      let listItem = document.createElement("li");
+      listItem.textContent = message.subject;
+      listItem.dataset.flag = message.flag;
+      list.appendChild(listItem);
+    });
+
+    function highlightUnread() {
+      // select all elements(li) in documents
+      var listItems = document.querySelectorAll("li");
+      listItems.forEach(function(listItem){
+        if (listItems.dataset.flag != "seen") {
+          // add listItems without seen flag -> add listItem into class "highlight"
+          listItems.classList.add("highlight");
+        } 
+      });
+    }
+
+    // call function highlight
+    highlightUnread();
+
+    
+  </script>
+</body>
+</html>
