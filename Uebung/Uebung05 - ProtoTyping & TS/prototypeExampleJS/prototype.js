@@ -35,14 +35,14 @@ Kugel.getBeschreibung = function(){
     console.log(this.bezeichner);
     //something from the ES6: the math functions
     console.log('Oberflaeche = ' + 4 * Math.PI * Math.pow(this.radius, 2)); 
-}
+};
 
 var Wuerfel = Object.create(Gegenstand);
 Wuerfel.seitenlaengen = null;
 Wuerfel.getBeschreibung = function(){
     console.log(this.bezeichner);
     console.log('Oberflaeche = ' + 6 * Math.pow(this.seitenlaengen, 2)); 
-}
+};
 
 //create the instances of the Gegenstande
 var eineKugel = Object.create(Kugel, {
