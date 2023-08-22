@@ -49,6 +49,7 @@ var tabea : Person = { name: 'Tabea', age: 24 };
 var maik : Person = { name: 'Maik', age: 32 };
 
 var employeesList : Person[] = [alex, maria, tabea, maik];
+
 var company01 = new Firma(employeesList);
 
 
@@ -60,8 +61,8 @@ function loadTable (firma : Firma) {
     var dataHTML = '';
     // key = index, value = name ... age ...
     for (let [key, value] of Object.entries(firma.personal)) {
-        dataHTML += `<tr> <th> ${value.name} </th>`;
-        dataHTML += ` <th> ${value.age} </th> </tr>`;
+        dataHTML += `<tr> <td> ${value.name} </td>`;
+        dataHTML += ` <td> ${value.age} </td> </tr>`;
     }
 
     var loadBtn = document.getElementById('button');
@@ -69,7 +70,7 @@ function loadTable (firma : Firma) {
     if (loadBtn != null && tableBody != null) {
         loadBtn.addEventListener('click', () => {
             // reset the innerHTML of the DOM-element
-            tableBody.innerHTML = dataHTML;
+            tableBody.innerHTML += dataHTML;
         });
     }
 }

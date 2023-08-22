@@ -37,15 +37,15 @@ function loadTable(firma) {
     // key = index, value = name ... age ...
     for (var _i = 0, _a = Object.entries(firma.personal); _i < _a.length; _i++) {
         var _b = _a[_i], key = _b[0], value = _b[1];
-        dataHTML += "<tr> <th> ".concat(value.name, " </th>");
-        dataHTML += " <th> ".concat(value.age, " </th> </tr>");
+        dataHTML += "<tr> <td> ".concat(value.name, " </td>");
+        dataHTML += " <td> ".concat(value.age, " </td> </tr>");
     }
     var loadBtn = document.getElementById('button');
     // !!!! ATTENTION :check not null of the DOM-elements
     if (loadBtn != null && tableBody != null) {
         loadBtn.addEventListener('click', function () {
             // reset the innerHTML of the DOM-element
-            tableBody.innerHTML = dataHTML;
+            tableBody.innerHTML += dataHTML;
         });
     }
 }
