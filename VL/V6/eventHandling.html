@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event handling</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- simple on-click operation can be written in-line -->
+            <button v-on:click="counter += 1">counter</button>
+            <p>Der Knopf wurde {{ counter }} oft gedrückt.</p>
+
+            <!-- complex operation -->
+            <!-- call the rndNumber() function -->
+            <button v-on:click="rndNumber">random number</button>
+            <p>Die Zufallszahl ist {{ randomNum }}.</p>
+
+            <!-- 测试动态参数 -->
+            <!-- event 必须是string格式 -->
+            <button v-on:[event]="changeContext">change context</button>
+            <p>{{ context }}</p>
+
+            <!-- 测试缩写 -->
+            <button @[event]="callByName">call me by name</button>
+            <p>{{ name }}</p>
+
+
+        </div>
+
+        <script src="./vueEventHandling.js"></script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>v-model</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input v-model="message" placeholder="Schreib etwas" type="text">
+            <p> Deine Eingabe: {{ message }}</p>
+
+            <input v-model="isChecked" type="checkbox">
+            <p>复选框的状态是: {{ isChecked }}</p>
+
+            <select v-model="selection">
+                <option value="Apple">Apple</option>
+                <option value="Lenovo">Lenovo</option>
+                <option value="Dell">Dell</option>
+            </select>
+            <p>选择框的选择是: {{ selection }}</p>
+
+        </div>
+        <script src="./vueModel.js"></script>
+    </body>
+</html>
+   

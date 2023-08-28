@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue condition</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- testing the conditional rendering-->
+            <h1 v-if="easy">Web-Engineering ist leicht</h1>
+            <h1 v-if-else="medium">Web-Engineering ist anspruchsvoll</h2>
+            <h1 v-else>Web-Engineering ist schwer</h1>
+            
+            <!-- control n DOM-elements -->
+            <template v-if="show">
+                <h1>Web-Engineering</h1> 
+                <h2>Thema</h2>
+                <p>Vue.js</p>
+            </template>
+        </div>
+        <script src="./vueCondition.js"></script>
+    </body>
+</html>
