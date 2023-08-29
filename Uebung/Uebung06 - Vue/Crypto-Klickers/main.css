@@ -1,0 +1,30 @@
+#titel {
+    grid-area: titel;
+}
+
+.spielfeld {
+    grid-area: spielfeld;
+}
+
+.upgrades {
+    grid-area: upgrades;
+}
+
+.options {
+    grid-area: options;
+}
+
+/* set to darkmode layout */
+.darkmode {
+    background-color: black;
+    color: white;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "titel titel"
+    "spielfeld upgrades"
+    "options options";
+}

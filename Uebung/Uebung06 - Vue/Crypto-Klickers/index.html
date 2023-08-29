@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crypto kickers</title>
+        <!-- für die deutsche Sprache -->
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="wrapper" v-bind:class="{darkmode : isDarkmode}">
+                <h1 id="title">Crypto kickers</h1>
+                <div class="spielfeld">
+                    <p>{{ cryptoMenge }} Crypto Coins</p>
+                    <p>Aktuelle Crypto Coins per Klick {{ cryptoModifikator }}</p>
+                    <button v-on:click="addCryptoCoins"> Mine Crypto </button>
+
+                    <!-- upgrade in upgradeList -->
+                    <p v-for="update in updateList">
+                        {{update.name}} : {{update.number}}
+                    </p>
+                </div>
+                <div class="upgrades">
+                    <button v-on:click="incCryproModifikator('botminer')"> Bot Miner: - 10 coins </button>
+                    <button v-on:click="incCryproModifikator('rtx3090')"> RTX 3090: - 50 coins</button>
+                    <button v-on:click="incCryproModifikator('botnetzwerk')"> Botnetzwerk: - 100 coins</button>
+                    <button v-on:click="incCryproModifikator('serverraum')"> Serverraum: - 500 coins</button>
+
+                    <!-- to show the infoText -->
+                    <p>{{ infoText }}</p>
+                </div>
+
+                <div class="options">
+                    <button v-on:click="clickOptionen"> Optionen </button>
+                    <!-- show template, ifOptionen = true -->
+                    <template v-if="isOption">
+                        <!-- the shorten version: v-on: replace by @ -->
+                        <button @click="toggelDarkMode"> Light mode </button>
+                        <button v-on:click="toggelDarkMode"> Dark mode </button>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <script src="vue.js"></script>
+    </body>
+</html>
