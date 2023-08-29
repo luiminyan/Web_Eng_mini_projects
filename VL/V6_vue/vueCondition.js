@@ -7,10 +7,6 @@ var vm = new Vue({
         medium: true,
         // for the DOM-elements in the template tag
         show: true
-    },
-    // methods
-    methods:{
-        
     }
 });
 

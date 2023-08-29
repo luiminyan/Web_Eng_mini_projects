@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue list rendering</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- v-for on list -->
+            <ul>
+                <li v-for="item in items">
+                    {{item.message}}
+                </li>
+            </ul>
+            <br>
+
+            <!-- on single object: to render all attributes in the object -->
+            <p v-for="attr in object01"> {{attr}}</p>
+
+            <!-- on object array -->
+            <p v-for="object in objectList"> Name: {{object.name}}, age: {{object.age}}</p>
+        </div>
+        
+        <script src="./v_for.js"></script>
+    </body>
+</html>
