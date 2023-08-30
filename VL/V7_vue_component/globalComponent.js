@@ -14,6 +14,17 @@ Vue.component("btn-counter", {
     template: '<button v-on:click="count"> Der Knopf wurde {{ counter }} mal gedrückt. </button>'
 });
 
+Vue.component("component-a", {
+    data: function(){
+        return{
+            // should return an object
+            item: 0
+        }
+    },
+    // create vue component in another vue component's template
+    template: '<btn-counter></btn-counter>'
+});
+
 // vue实例应该放在component后面
 var vm = new Vue({
     el: "#app"
