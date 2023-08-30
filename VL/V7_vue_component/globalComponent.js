@@ -28,4 +28,5 @@ Vue.component("component-a", {
 // vue实例应该放在component后面
 var vm = new Vue({
     el: "#app"
+    // global component 不需要在 Vue instance 里面注册
 });
