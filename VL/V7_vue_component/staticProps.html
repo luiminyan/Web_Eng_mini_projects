@@ -11,6 +11,15 @@
 
             <component-b title="VL01" date="12.24" content="Christmas"></component-b>
             <component-b title="VL02" date="07.02" content="A Summer Day"></component-b>
+
+            <!-- v-bind:<var.name> = "", ""是自带的,如果要添加string，需要单独写引号 -->
+            <component-c v-bind:content="'Paragraph created by v-bind and props.'"></component-c>
+
+            <!-- v-bind, props, Boolean -->
+            <component-d v-bind:isbool="true"></component-d>
+
+            <!-- others(number, array, object) -->
+            <component-others v-bind:likes="42" v-bind:commentids="[10232, 33261, 43784]" v-bind:person="{name: 'Lisa', age: 12}"></component-others>
         </div>
 
         <script src="./staticProps.js"></script>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamische Props</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- dynamic linking on root instance .data -->
+            <component-a v-bind:title = "propData.title" v-bind:date = "propData.date" v-bind:content= "propData.content"></component-a>
+            <br>
+            <!-- dynamic object linking -->
+            <!-- v-bind:<attr.from props in component = "object from .data in root instrance"> -->
+            <component-b v-bind:prop-data="propData"></component-b>
+
+        </div>
+        <script src="./dynamicProps.js"></script>
+    </body>
+</html>

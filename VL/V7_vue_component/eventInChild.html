@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Handling event in child component</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- v-on:click="&emit('event-name')" -->
+            <!-- 点击button，call对应的方法$emit('enlarge-text')，产生事件enlarge-text，使父组件监听 -->
+            <button v-on:click="$emit('enlarge-text')">Enlarge text</button>
+            <!-- 监听enlarge-text，对应的方法加大子号 -->
+            <component-a v-on:enlarge-text="propFontSize += 0.1"></component-a>
+        </div>
+        <script src="./eventInChild.js"></script>
+    </body>
+</html>
