@@ -5,5 +5,8 @@ Vue.component("component-a", {
 
 // root instance
 var vm = new Vue({
-    el: "#app"
+    el: "#app",
+    data:{
+        propFontSize: 1
+    }
 });

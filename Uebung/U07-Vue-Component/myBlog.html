@@ -7,8 +7,11 @@
  	</head>
 	<body>
 		<div id="app">
+			<!-- show all blogs from root -->
 			<my-blog v-for="blog in blogEntrys" v-bind:blog="blog"></my-blog>
-			<create-blog-entry @commit-new-blog="addNewBlog"></create-blog-entry>
+			<!-- a blog entry -->
+			<!-- 监听自己组件中的commit-new-blog事件，如果处罚，则call根组件中的 addNewBlog -->
+			<create-blog-entry v-on:commit-new-blog="addNewBlog"></create-blog-entry>
 		</div>
 		<script src="myBlog.js"></script>
 	</body>

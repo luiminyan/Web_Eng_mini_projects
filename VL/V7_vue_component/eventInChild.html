@@ -9,7 +9,7 @@
             <!-- v-on:click="&emit('event-name')" -->
             <!-- 点击button，call对应的方法$emit('enlarge-text')，产生事件enlarge-text，使父组件监听 -->
             <button v-on:click="$emit('enlarge-text')">Enlarge text</button>
-            <!-- 监听enlarge-text，对应的方法加大子号 -->
+            <!-- 监听enlarge-text，对应的方法加大子豪 -->
             <component-a v-on:enlarge-text="propFontSize += 0.1"></component-a>
         </div>
         <script src="./eventInChild.js"></script>
