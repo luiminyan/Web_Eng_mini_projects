@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A summary example of Vue.js</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- show all user-inputs -->
+            <my-user-input v-for="inputItemRoot in userInputList" v-bind:user-input="inputItemRoot"></my-user-input>
+            <!-- create new input -->
+            <create-user-input v-on:add-user-input="addUserInput"></create-user-input>
+        </div>
+        <script src="./aSummaryExample.js"></script>
+    </body>
+</html>
