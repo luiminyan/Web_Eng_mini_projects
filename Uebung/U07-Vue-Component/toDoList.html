@@ -16,8 +16,8 @@
  	</head>
 	<body>
 		<div id="app">
-			<main-to-do-list></main-to-do-list>
-			<to-do-list-contoller></to-do-list-contoller>
+			<main-to-do-list v-for="item in toDoItems" v-bind:item="item" v-on:delete-todo="deleteToDoItem"></main-to-do-list>
+			<to-do-list-contoller v-on:add-to-do-item="addToDoItem"></to-do-list-contoller>
 		</div>
 		<script src="toDoList.js"></script>
 	</body>
