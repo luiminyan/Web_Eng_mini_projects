@@ -8,7 +8,7 @@ showAllFilmbtn.addEventListener('click', ()=>{
         // define the request method (get, put, post, delete)
         method:'get',
         // expected header information of reply 
-        headers: {
+        headers:{
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }
@@ -17,7 +17,7 @@ showAllFilmbtn.addEventListener('click', ()=>{
     }).then(function(response){
         // response from server is always firstly a promise
         // if a promise is fullfilled
-        // data is sent from server
+        // data is sent from server (filmList)
         response.json().then(function(data){
             let filmListe = JSON.parse(data);
             showFilmTable(filmListe);
