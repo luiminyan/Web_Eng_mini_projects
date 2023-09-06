@@ -22,5 +22,10 @@
      in child component/DOM(create user-def-event): v-on:<event>="$emit("user-def-event", argu.)"<br>
      argument: <child component .data>: func(){return {object{}}}, the object is the argument <br>
      in parent ~ (handle the u-d-event): v-on:<u-d-event>="call func."
-   
+
+8. REST / fetchAPI (client side) / express.js (server side) <br>
+   - cors.js: for resource safety
+   - express.js: simplified server creation and deklaritive routing(GET, PUT, POST, DELETE) <br>
+   - client side: example: in HTML file, create request by fetch() <br>
+   - server side: in <app>.js file, create reply functions <br>
    
