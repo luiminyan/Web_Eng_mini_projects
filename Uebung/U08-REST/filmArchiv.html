@@ -13,11 +13,15 @@
 	</style>
  	</head>
 	<body>
+		<!-- Aufgabe 1 / filmArchiv -->
+		<!-- place to put the film item -->
 		<div id="film"></div>
 		<div>
 			<input type="button" value="Previous" id="previous">
 			<input type="button" value="Next" id="next">
 		</div>
+		
+		<!-- Aufgabe 2 -->
 		<div>
 			<table>
 				<tr>
@@ -32,18 +36,27 @@
 					<td><input type="text" id="filmRegieInput"></td>
 					<td><p>Regie</p></td>
 				</tr>
-			</table><br>
+			</table>
+			<br>
 			<input type="button" value="Add Film" id="addFilm">
 			<input type="button" value="Delete Film" id="deleteFilm">
 		</div>
+
+		<!-- example task 0 -->
 		<div>
+			<!-- create GET request, read spielfilme.json and create table below -->
 			<input type="button" value="Show All Films" id="allFilms">
 			<br><br>
 			<table id="filmTable">
 			</table>
 		</div>
+		<!-- the show-all-films btn function -->
 		<script src="filmArchivTable.js"></script>
+
+		<!-- Aufgabe 1 -->
 		<script src="filmArchiv.js"></script>
-		<script src="modifyFilmArchiv.js"></script>
+
+		<!-- Aufgabae 2 -->	
+		<script src="modifyFilmArchiv.js"></script> 
 	</body>
 </html>
