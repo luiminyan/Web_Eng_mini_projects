@@ -40,4 +40,17 @@
          - create mixin block: <br>
            mixin <mixin-name> (args.) <br>
            <tab or blank>...
-         - use mixin: - <mixin-name>(args.)    
+         - use mixin: - <mixin-name>(args.)
+      - app<br>
+        .use(<router>.allowedMethods)<br>
+        .use(bodyparser())<br>
+        .use(<router>.routes())<br>
+      - app.listen(<port: 8080(if http)>, ()=>{...})
+  - pug: remplate machine
+       - modules: pug / koa-pug, path
+       - read path: const path = require('path');
+       - create pug object: <br>
+            const Pug = new pug({ <br>
+               // all pug files are stored in dir named 'views' <br>
+               viewPath: path.resolve(__dirname, 'views'); <br>
+            }); <br>
