@@ -36,5 +36,8 @@
       - error handling:
          - (in router.method) ctx.throw(status-code, "msg.")
          - app.on('error', err=>{...});
-      - mixin:
-   
+      - mixin: reusable blocks
+         - create mixin block: <br>
+           mixin <mixin-name> (args.) <br>
+           <tab or blank>...
+         - use mixin: - <mixin-name>(args.)    
