@@ -1,0 +1,20 @@
+//- resuable Film item
+mixin Film(titel, datum, regie)
+    div.filmBorder
+        div.filmFont= titel
+        div.filmFont= datum
+        div.filmFont= regie
+
+//- reusable Music item
+mixin Music(titel, artist)
+    div.musicBorder
+        div.musicFont= titel
+        div.musicFont= artist
+
+div
+    each item in itemList
+        if item.datum
+            //- use the film item
+            +Film(item.titel, item.datum, item.regie)
+        if item.artist
+            +Music(item.titel, item.artist)

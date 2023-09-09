@@ -1,1 +1,41 @@
+//- # represents id
 p #{name}'s Pug source code! 
+
+//- unbuffered: do not print, but execute the js code
+- var alter = 3;
+- for (var x = 0; x < alter; x++) 
+    li item
+
+//- mixin: Wiederverwendenbarer Block
+mixin vorlesung(datum, beschreibung)
+    //- create div, assign in class customStyle
+    div.customStyle
+        //- buffered code: content = variable
+        div.datumStyle= datum
+        div.beschreibungStyle= beschreibung 
+
+doctype html
+    html
+        head
+            title Mixins in Pug
+            style
+                .customStyle{
+                    padding: 10px;
+                    border: 1px solid #555;
+                    width: 300px;
+                }
+                .beschreibungStyle{
+                    font-size: 100%;
+                    font-family: helvetica;
+                }
+                .datumStyle{
+                    text-align: right;
+                    font-weight: bold;
+                }
+        body
+            //- unbuffered code: JavaScript
+            - const v3 = {d:"04-05-2020", b:"JavaScript"}
+            //- use Mixin 
+            +vorlesung(v3.d, v3.b);
+
+
