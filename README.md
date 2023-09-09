@@ -32,6 +32,8 @@
 9. Koa.js / Pug.js
    - koa: promised based controll flow
       - modules: koa, koa-router, koa-bodyparser, (possible) fs
+      - install koa: const Koa = require('koa');
+      - create koa object: const app = new Koa();
       - ctx instead of req and res
       - error handling:
          - (in router.method) ctx.throw(status-code, "msg.")
@@ -49,8 +51,23 @@
   - pug: remplate machine
        - modules: pug / koa-pug, path
        - read path: const path = require('path');
-       - create pug object: <br>
+       - use pug in server
+          - koa: create pug object: <br>
             const Pug = new pug({ <br>
                // all pug files are stored in dir named 'views' <br>
                viewPath: path.resolve(__dirname, 'views'); <br>
-            }); <br>
+               app: app
+            }); <br> 
+          - in method: router.<method>('path', async ctx => {await ctx.render('<pug-file-name>', {parameter(s)});});
+          - express:<br>
+             app.set('views', path.join(__dirname, 'views')); <br>
+             app.set('view engine', 'pug');<br>
+   
+          - loop in pug: <br>
+                each item in itemList <br>
+                  ... <br>
+         - if ...<br>
+              ...<br>
+           else ...<br>
+                   
+      
