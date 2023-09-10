@@ -69,5 +69,6 @@
          - if ...<br>
               ...<br>
            else ...<br>
-                   
+           
+10. Datenbank / Sequelize
       
