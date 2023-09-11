@@ -1,9 +1,10 @@
 const Express = require('express');
 const cors = require('cors');
+const bodyparser = require('body-parser');
 
 // create express object
 var app = new Express();
-app.use(cors(), Express());
+app.use(cors(), Express(), bodyparser.json(), bodyparser.urlencoded({extended:false}));
 var pisten = {
     '1' : {
         'name':'Heuberg',
@@ -29,10 +30,10 @@ app.get('/pisten', (req, res)=>{
 });
 
 app.get('/pisten/:pistenId', (req, res)=>{
-    let pistenId = req.param.pistenId;
+    let pistenId = req.params.pistenId;
     const pistenItem = pisten[pistenId];
     if (!pistenItem) {
-        res.status(404);
+        res.status(404).json('Piste not found');
     } 
     else {
         res.json(pistenItem);
@@ -42,14 +43,10 @@ app.get('/pisten/:pistenId', (req, res)=>{
 
 app.put('/pisten', (req, res)=>{
     // read client request
-    let newPisten = req.body;
-    if (!newPisten || pisten[newPisten.id]) {
-        res.status(400);
-    }
-    else {
-        pisten[newPisten.id] = newPisten;
-        res.status(201);
-    }
+    const newPisten = req.body;
+    const newId = Object.keys(pisten).length + 1;
+    pisten[newId] = newPisten;
+    res.status(201).json(pisten);
 });
 
 const port = process.env.PORT || 3000;
