@@ -1,0 +1,48 @@
+.core > * {
+    border: 2px solid black;
+    /* width 60% of window */
+    background-color: #DDDDDD;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.head{
+    display: flex;
+    /* 左右对齐 */
+    justify-content:center;
+    grid-area: head;
+}
+
+.login {
+    grid-area: login;
+}
+
+.news{
+    grid-area: news;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.nav{
+    padding-left: 0;
+    grid-area: nav;
+}
+
+.core{
+    display: grid;
+    width: 60%;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 2fr, 1fr, 6fr, 2fr;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "head head "
+        "nav nav"
+        "login news"
+        "footer footer";
+}
+
+a:link {
+    text-decoration: none;
+}

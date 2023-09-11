@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Beispiel Seite</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <div class="core">
+            <div class="head">
+                <h1>Beispielseite</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="#">News</a>
+                    <a href="#">About</a>
+                    <a href="#">Impressum</a>
+                </ul>
+            </div>
+            <div class="login">
+                <h3>login</h3>
+                <label>Benutzername</label>
+                <input id="logName" name="username" type="text" placeholder="Benutzername">
+                <label>Password</label>
+                <input id="pw" name="password" type="password">
+                <input type="button" value="Beenden" onclick="validateUser()">
+            </div>
+            <div class="news">
+                <h1>Neuigkeiten</h1>
+                <p>Lorem ipsem...</p>
+            </div>
+            <div class="footer">The footer</div>
+        </div>
+    </body>
+</html>
+<script>
+    function validateUser(){
+        // validate login input
+        let logName = document.getElementById('logName');
+        let password = document.getElementById('pw');
+        let logNameValue = logName.value;
+        let passwordValue = password.value;
+        if (logNameValue == "") {
+            alert("Username is empty!");
+            return;
+        }
+        else if (passwordValue.length < 6) {
+            alert("Password length is too short!");
+            return;
+        }
+        submitForm();
+    }
+
+    function submitForm(){
+        console.log("success");
+    }
+</script>
