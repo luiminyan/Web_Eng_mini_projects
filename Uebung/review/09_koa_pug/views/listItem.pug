@@ -1,0 +1,8 @@
+mixin Music(titel, artist)
+    div.musicBorder
+        div.musicContent= titel
+        div.musicContent= artist 
+div 
+    each item in itemList
+        if item.titel 
+            + Music(item.titel, item.artist)

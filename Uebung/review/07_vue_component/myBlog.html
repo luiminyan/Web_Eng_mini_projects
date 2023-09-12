@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My blog</title>
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- blog area -->
+            <my-blog v-for="blog in blogList" v-bind:blog-item="blog"></my-blog>
+            <!-- input entry -->
+            <create-blog v-on:add-blog="addBlog"></create-blog>
+        </div>
+        <script src="./myBlog.js"></script>
+    </body>
+</html>
