@@ -1,4 +1,5 @@
 # Web_Engineering_SoSe23
+PASSED with 85%, thus stored as archive
 1. HTML basics
 2. CSS<br>
    2.1 Selektoren: Universal*, Kind(>), Nachfahren( ), Nachbar(+), Geschwister(~)<br>
